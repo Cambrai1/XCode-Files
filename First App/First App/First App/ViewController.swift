@@ -10,20 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var lightOn = true
+    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var messageButtonPress: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        updateUI()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
-    @IBAction func doButtonTap(_ sender: AnyObject) {
-        print("Button touched!")
+    
+    func updateUI(){
+        view.backgroundColor = lightOn ? .white : .black
+        messageLabel.textColor = lightOn ? .black : .white
     }
     
+    
+    @IBAction func doButtonTap(_ sender: Any) {
+        print("Button touched!")
+        lightOn = !lightOn
+        messageLabel.text = "The spaghetti is cooked!"
+        messageButtonPress.setTitle("ravioli", for: .normal)
+        updateUI()
+    }
 }
 

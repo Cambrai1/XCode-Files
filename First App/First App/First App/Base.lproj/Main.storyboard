@@ -20,31 +20,39 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I have a message..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwe-BJ-vd3">
-                                <rect key="frame" x="60.5" y="100" width="253" height="37"/>
+                                <rect key="frame" x="61" y="100" width="253" height="37"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="31"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fm0-2m-KoQ">
-                                <rect key="frame" x="152" y="549" width="70" height="38"/>
+                                <rect key="frame" x="0.0" y="583" width="375" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="KJd-Jk-atV"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
-                                <state key="normal" title="Tell Me!"/>
+                                <state key="normal" title="Omg please share"/>
                                 <connections>
-                                    <action selector="doButtonTap:" destination="BYZ-38-t0r" eventType="touchDown" id="CZ0-AQ-flu"/>
+                                    <action selector="doButtonTap:" destination="BYZ-38-t0r" eventType="touchDown" id="v9y-Lr-zjc"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="dwe-BJ-vd3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="J4l-lI-hrh"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fm0-2m-KoQ" secondAttribute="bottom" constant="80" id="KJQ-o8-WRP"/>
-                            <constraint firstItem="fm0-2m-KoQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gbB-F7-alh"/>
+                            <constraint firstItem="fm0-2m-KoQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="UpZ-0o-AZP"/>
+                            <constraint firstItem="fm0-2m-KoQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="iVj-5h-58l"/>
                             <constraint firstItem="dwe-BJ-vd3" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="ibf-eR-nD4"/>
                             <constraint firstItem="dwe-BJ-vd3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kJp-6Q-bur"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fm0-2m-KoQ" secondAttribute="bottom" constant="42" id="yCA-FL-A7D"/>
                             <constraint firstItem="dwe-BJ-vd3" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="80" id="zAB-sU-eDV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="messageButtonPress" destination="fm0-2m-KoQ" id="mI7-Xo-NRW"/>
+                        <outlet property="messageLabel" destination="dwe-BJ-vd3" id="Wk0-FD-0mb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
